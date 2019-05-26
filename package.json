@@ -1,0 +1,19 @@
+{
+  "name": "projet",
+  "version": "1.0.0",
+  "description": "Tea time project par Fabien TREVE et Gautier NICOLLET, Ynov Lyon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ynov-b3-2019-nodejs/projects-team-tea-time.git"
+  },
+  "author": "Fabien TREVE & Gautier NICOLLET",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ynov-b3-2019-nodejs/projects-team-tea-time/issues"
+  },
+  "homepage": "https://github.com/ynov-b3-2019-nodejs/projects-team-tea-time#readme"
+}

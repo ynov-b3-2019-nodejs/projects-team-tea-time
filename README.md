@@ -1,9 +1,10 @@
 # projects-team-tea-time
 
-Auteurs: TRÈVE Fabien & NICOLLET Gautier
+#Auteurs
+TRÈVE Fabien & NICOLLET Gautier
 
 #Description
-Projet de messagerie instantané temporaire basé sur WebSocket.io en NodeJS.
+Projet étudiant de messagerie instantané temporaire en NodeJS. Campus Ynov de Lyon, formation B3 Ingésup 18-19.
 
 #Pour lancer le projet: 
 - yarn install
@@ -13,12 +14,10 @@ Projet de messagerie instantané temporaire basé sur WebSocket.io en NodeJS.
 #Contexte
 Rassembler dans un salon de discussion les personnes participant à un évènement. Lorsque celui-ci se termine, le salon et ses conversations sont supprimés.
 
-#Technologies
-- NodeJs
-
 #Modules
 - Express
 - EJS
+- socket.io
 
 #Installation
 

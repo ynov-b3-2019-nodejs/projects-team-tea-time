@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ynov-b3-2019-nodejs/projects-team-tea-time#readme",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "ejs": "^2.6.1",
     "ejs-html": "^5.1.5",
     "express": "^4.17.1",

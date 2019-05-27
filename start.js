@@ -9,11 +9,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/rooms', function(req, res) {
-    res.render('room/home.ejs');
+    res.render('homePage.ejs');
 });
 
-app.get('/rooms/:idroom/home', function(req, res) {
-    
+app.get('/room/:idroom/home', function(req, res) {
+
     const idroom = req.params.idroom;
     if(isNaN(idroom)){
         res.status(404).send('Page introuvable !');

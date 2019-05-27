@@ -2,7 +2,6 @@ const express = require('express');
 const ejs = require('ejs');
 
 const app = express();
-app.set('view engine', 'pug');
 
 app.get('/', function(req, res) {
     res.setHeader('Content-Type', 'text/plain');

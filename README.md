@@ -3,7 +3,7 @@
 Auteurs: TRÈVE Fabien & NICOLLET Gautier
 
 #Description
-Projet de chat temporaire en temps réel basé sur WebSocket.io en NodeJS.
+Projet de messagerie instantané temporaire basé sur WebSocket.io en NodeJS.
 
 #Pour lancer le projet: 
 - yarn install
@@ -13,6 +13,11 @@ Projet de chat temporaire en temps réel basé sur WebSocket.io en NodeJS.
 Rassembler dans un salon de discussion les personnes participant à un évènement. Lorsque celui-ci se termine, le salon et ses conversations sont supprimés.
 
 #Technologies
+- NodeJs
+
+#Modules
+- Express
+- EJS
 
 #Installation
 

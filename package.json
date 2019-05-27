@@ -18,6 +18,8 @@
   "homepage": "https://github.com/ynov-b3-2019-nodejs/projects-team-tea-time#readme",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.17.1"
+    "ejs-html": "^5.1.5",
+    "express": "^4.17.1",
+    "pug": "^2.0.3"
   }
 }

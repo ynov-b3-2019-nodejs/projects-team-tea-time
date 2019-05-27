@@ -1,24 +1,25 @@
-var express = require('express');
+const express = require('express');
+const ejs = require('ejs');
 
-var app = express();
+const app = express();
+app.set('view engine', 'pug');
 
 app.get('/', function(req, res) {
     res.setHeader('Content-Type', 'text/plain');
     res.send('Vous êtes à l\'accueil, que puis-je pour vous ?');
 });
 
-app.get('/saloons', function(req, res) {
-    res.setHeader('Content-Type', 'text/plain');
-    res.send('Vous êtes dans la cave à thé, ces sachets sont à moi !');
+app.get('/rooms', function(req, res) {
+    res.render('room/home.ejs');
 });
 
-app.get('/saloon/:idsaloon/home', function(req, res) {
-    res.setHeader('Content-Type', 'text/plain');
-    const idsaloon = req.params.idsaloon;
-    if(isNaN(idsaloon)){
+app.get('/rooms/:idroom/home', function(req, res) {
+    
+    const idroom = req.params.idroom;
+    if(isNaN(idroom)){
         res.status(404).send('Page introuvable !');
     }
-    res.end('Vous êtes à la chambre de l\'étage n°' + req.params.idsaloon);
+    res.render('room/home.ejs', {id: idroom});
 });
 
 app.use(function(req, res, next){

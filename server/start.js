@@ -1,11 +1,10 @@
 const express = require('express');
-const ejs = require('ejs');
 
 const app = express();
 
 app.get('/', function(req, res) {
     res.setHeader('Content-Type', 'text/plain');
-    res.send('Vous êtes à l\'accueil, que puis-je pour vous ?');
+    res.render('/client/src/App.vue');
 });
 
 app.get('/rooms', function(req, res) {

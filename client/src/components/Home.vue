@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <!--<div class="hello">
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -27,16 +27,50 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+  </div>-->
+  <div id="containerHome">
+    <div class="row">
+      <div class="col-1">
+      </div>
+      <div class="col-4">
+        <h2>Créer un salon</h2>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="inputIdSalon" placeholder="Nom du salon">
+            <div class="form-row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="blabla">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="blabla">
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Go !</button>
+        </form>
+      </div>
+      <div class="col-2">
+      </div>
+      <div class="col-4">
+        <h2>Rejoindre un salon</h2>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="inputIdSalon" placeholder="ID du salon">
+            <small id="IdSalonHelp" class="form-text text-muted">Entrer ci-dessus l'ID du salon que vous souhaitez rejoindre.</small>
+          </div>
+          <button type="submit" class="btn btn-primary">Go !</button>
+        </form>
+      </div>
+      <div class="col-1">
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
+
+export default {}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

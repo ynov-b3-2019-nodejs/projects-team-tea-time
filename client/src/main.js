@@ -1,6 +1,9 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import App from './App'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import App from './App.vue';
+//import JQuery from 'jquery';
+import 'bootstrap';
+import './assets/stylesheets/style.scss';
 
 /*Vue.config.productionTip = false*/
 
@@ -23,7 +26,7 @@ const router = new VueRouter({
 })
 
 new Vue({
-  el: '#app',
+  //el: '#app',
   router,
   render: h => h(App),
 }).$mount('#app')

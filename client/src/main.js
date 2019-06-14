@@ -1,32 +1,34 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import App from './App.vue';
+import App from './App';
 //import JQuery from 'jquery';
 import 'bootstrap';
 import './assets/stylesheets/style.scss';
 
-/*Vue.config.productionTip = false*/
+import Home from './components/Home';
+import Room from './components/Room';
 
+Vue.config.productionTip = false;
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   mode: 'history',
   routes: [{
-    /*path: '/',
-    component: require('./components/HelloWorld.vue')*/
     path: '/',
-    component: require('./components/Home.vue')
-  }, {
-    path: '/room/:id(\\d+)',
-    component: require('./components/Room.vue')
-  }, {
+    component: Home,
+    name: 'root'
+  },
+  {
+    path: '/room/:roomName',
+    component: Room
+  },
+  {
     path: '*',
     redirect: '/'
   }]
 })
 
 new Vue({
-  //el: '#app',
   router,
   render: h => h(App),
 }).$mount('#app')

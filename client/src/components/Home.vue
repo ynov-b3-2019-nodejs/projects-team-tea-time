@@ -1,33 +1,4 @@
 <template>
-  <!--<div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>-->
   <div id="containerHome">
     <div class="row">
       <div class="col-1">
@@ -36,29 +7,29 @@
         <h2>Créer un salon</h2>
         <form>
           <div class="form-group">
-            <input type="text" class="form-control" id="inputIdSalon" placeholder="Nom du salon">
+            <input type="text" class="form-control"  name="newRoomName" v-model="newRoomName" id="inputIdSalon" placeholder="Nom du salon">
             <div class="form-row">
               <div class="col">
-                <input type="text" class="form-control" placeholder="blabla">
+                <input type="text" name="newRoomEvent" v-model="newRoomEvent" class="form-control" placeholder="Evenement">
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="blabla">
+                <input type="text" name="newRoomDescription" v-model="newRoomDescription" class="form-control" placeholder="Description">
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">Go !</button>
+          <button type="submit"  @click.stop.prevent="createRoom()" class="btn btn-primary">C'est parti !</button>
         </form>
       </div>
       <div class="col-2">
       </div>
       <div class="col-4">
         <h2>Rejoindre un salon</h2>
-        <form>
+        <form id="joinRoom" >
           <div class="form-group">
-            <input type="text" class="form-control" id="inputIdSalon" placeholder="ID du salon">
-            <small id="IdSalonHelp" class="form-text text-muted">Entrer ci-dessus l'ID du salon que vous souhaitez rejoindre.</small>
+            <input type="text" class="form-control" name="roomName" v-model="roomName" placeholder="Nom du salon">
+            <small id="nomSalonHelp" class="form-text text-muted">Entrez ci-dessus le nom du salon que vous souhaitez rejoindre.</small>
           </div>
-          <button type="submit" class="btn btn-primary">Go !</button>
+          <button type="submit" @click.stop.prevent="joinRoom()" class="btn btn-primary">Rejoindre !</button>
         </form>
       </div>
       <div class="col-1">
@@ -69,7 +40,28 @@
 
 <script>
 
-export default {}
+export default {
+  data(){
+    return{
+      //errors:[],
+      roomName: null,
+      newRoomName: null,
+      newRoomDescription: null,
+      newRoomEvent: null
+    }
+  },
+  methods:{
+    createRoom(){
+      if(!this.newRoomName && !this.newRoomEvent) return true;
+      this.$router.push("/room/"+ this.newRoomName);
+    },
+    joinRoom() {
+      //add if room exists statement  
+      if(!this.roomName) return true;
+      this.$router.push("/room/"+ this.roomName);
+    }
+  }
+}
 
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img id="TeaTimeLogo" alt="Vue logo" src="./assets/logo_TeaTime.png">
-    
+    <router-link to="/"><img id="TeaTimeLogo" alt="Vue logo" src="./assets/logo_TeaTime.png"></router-link>
+
     <router-view/>
   </div>
 </template>

@@ -13,3 +13,29 @@ body{
   background-color: #366D73;
   border-color: #366D73;
 }
+
+.btn-success{
+  background-color: #366D73;
+  border-color: #366D73;
+}
+
+.card-body{
+    display: table;
+}
+
+.messagesOther {
+	position: relative;
+  /*display: inline-block;*/
+  margin: 10px 0px;
+  height: 55px;
+  min-width : 150px;
+  width: 150px;
+	background: #5A8C8C;
+	border-radius: .4em;
+  white-space: nowrap;
+  padding: 15px 10px;
+}
+
+.messagesOther p {
+  color: white;
+}

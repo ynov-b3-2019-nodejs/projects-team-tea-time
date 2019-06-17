@@ -3,21 +3,29 @@
     <h1>Room</h1>
     <p>{{ $route.params.roomName }}</p>
     <form @submit.prevent="sendMessage">
-      <div class="gorm-group">
+      <div class="form-group">
         <label for="user">Utilisateur:</label>
         <input type="text" v-model="user" class="form-control" style="width: unset; margin: auto;">
       </div>
-      <div class="gorm-group pb-3">
+      <div class="form-group pb-3">
         <label for="message">Message:</label>
         <input type="text" v-model="message" class="form-control" style="width: unset; margin: auto;">
       </div>
       <button type="submit" class="btn btn-success">Send</button>
     </form>
+    <div class="col-4">
     <div class="card-body">
-      <div class="messages" v-for="(msg, index) in messages" :key="index">
-        <p><span class="font-weight-bold">{{ msg.user }}: </span>{{ msg.message }}</p>
+      <div v-for="(msg, index) in messages" :key="index">
+        <div class="messagesUser" v-if="msg.user === user">
+          <p><span class="font-weight-bold">[{{ msg.user }}] : </span>{{ msg.message }}</p>
+        </div>
+        <div class="messagesOther" v-else>
+          <p><span class="font-weight-bold">[{{ msg.user }}] : </span>{{ msg.message }}</p>
+        </div>
       </div>
     </div>
+    </div>
+    <div class="col-8"></div>
     <router-link to="/">Accueil</router-link>
   </div>
 </template>

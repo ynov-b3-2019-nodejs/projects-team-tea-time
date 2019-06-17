@@ -56,7 +56,7 @@ export default {
       this.$router.push("/room/"+ this.newRoomName);
     },
     joinRoom() {
-      //add if room exists statement  
+      //add if room exists statement
       if(!this.roomName) return true;
       this.$router.push("/room/"+ this.roomName);
     }

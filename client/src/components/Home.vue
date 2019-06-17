@@ -15,6 +15,10 @@
               <div class="col">
                 <input type="text" name="newRoomDescription" v-model="newRoomDescription" class="form-control" placeholder="Description">
               </div>
+              <div>
+              <input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+<input type="text" id="textInput" value="15">
+</div>
             </div>
           </div>
           <button type="submit"  @click.stop.prevent="createRoom()" class="btn btn-primary">C'est parti !</button>
@@ -59,7 +63,9 @@ export default {
       //add if room exists statement
       if(!this.roomName) return true;
       this.$router.push("/room/"+ this.roomName);
-    }
+    },updateTextInput(val) {
+          document.getElementById('textInput').value=val; 
+        }
   }
 }
 

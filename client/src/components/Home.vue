@@ -22,8 +22,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="customRange3">Durée du salon</label>
-              <input type="range" class="custom-range" min="0" max="30" step="1" id="customRange3">
+              <label for="customRange3">Durée du salon (en jours)</label>
+              <input type="range" v-model="value" class="custom-range" min="0" max="30" step="1" value="15" id="customRange3">
+              <input id="rangeValue" type="number" v-model="value"/>
             </div>
           </div>
           <button type="submit"  @click.stop.prevent="createRoom()" class="btn btn-primary">C'est parti !</button>
@@ -56,7 +57,8 @@ export default {
       roomName: null,
       newRoomName: null,
       newRoomDescription: null,
-      newRoomEvent: null
+      newRoomEvent: null,
+      value: 0
     }
   },
   methods:{

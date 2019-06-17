@@ -3,17 +3,22 @@
     <div class="row">
       <div class="col-1">
       </div>
-      <div class="col-4">
+      <div class="col-4 divHomeForm">
         <h2>Créer un salon</h2>
         <form>
           <div class="form-group">
             <input type="text" class="form-control"  name="newRoomName" v-model="newRoomName" id="inputIdSalon" placeholder="Nom du salon">
             <div class="form-row">
               <div class="col">
-                <input type="text" name="newRoomEvent" v-model="newRoomEvent" class="form-control" placeholder="Evenement">
+                <input type="text" name="newRoomDescription" v-model="newRoomDescription" class="form-control" placeholder="Description">
               </div>
               <div class="col">
-                <input type="text" name="newRoomDescription" v-model="newRoomDescription" class="form-control" placeholder="Description">
+                <select name="newRoomCategory" v-model="newRoomCategory" class="form-control" id="exampleFormControlSelect1">
+                  <option>Sport</option>
+                  <option>Musique</option>
+                  <option>Cinéma</option>
+                  <option>Autres</option>
+                </select>
               </div>
             </div>
           </div>
@@ -22,7 +27,7 @@
       </div>
       <div class="col-2">
       </div>
-      <div class="col-4">
+      <div class="col-4 divHomeForm">
         <h2>Rejoindre un salon</h2>
         <form id="joinRoom" >
           <div class="form-group">

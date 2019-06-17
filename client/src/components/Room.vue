@@ -46,7 +46,7 @@
         return {
             user: pseudo,
             message: '',
-            messages: [{user: "t1", message: 'm1'}],
+            messages: [],
             //socket : io('localhost:3000')
             socket : io('10.69.1.202:3000')
         }

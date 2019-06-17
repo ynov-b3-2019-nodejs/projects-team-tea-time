@@ -8,16 +8,10 @@ Projet étudiant de messagerie instantané temporaire en NodeJS. Campus Ynov de 
 
 #Pour lancer le projet: 
 - yarn install
-- node start.js
+- yarn start
+- yarn serve dans le dossier /client
 - Web browser: localhost:8080
 
 #Contexte
-Rassembler dans un salon de discussion les personnes participant à un évènement. Lorsque celui-ci se termine, le salon et ses conversations sont supprimés.
-
-#Modules
-- Express
-- EJS
-- socket.io
-
-#Installation
+Rassembler dans un salon de discussion anonyme les personnes participant à un évènement.
 

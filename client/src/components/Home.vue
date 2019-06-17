@@ -20,6 +20,10 @@
                   <option>Autres</option>
                 </select>
               </div>
+              <div>
+              <input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+<input type="text" id="textInput" value="15">
+</div>
             </div>
             <div class="form-group">
               <label for="customRange3">Durée du salon (en jours)</label>
@@ -70,7 +74,9 @@ export default {
       //add if room exists statement
       if(!this.roomName) return true;
       this.$router.push("/room/"+ this.roomName);
-    }
+    },updateTextInput(val) {
+          document.getElementById('textInput').value=val; 
+        }
   }
 }
 

@@ -12,7 +12,7 @@
       <div class="col-10">
         <div id="chat-content">
           <div id="card-body">
-            <div v-for="(msg, index) in messages" :key="index">
+            <div v-if="msg.message" v-for="(msg, index) in messages" :key="index">
               <div class="messagesUser" v-if="msg.user === user">
                 <p><span class="font-weight-bold"></span>{{ msg.message }}</p>
               </div>
@@ -47,8 +47,8 @@
             user: pseudo,
             message: '',
             messages: [],
-            //socket : io('localhost:3000')
-            socket : io('10.69.1.202:3000')
+            socket : io('localhost:3000')
+            //socket : io('10.69.1.202:3000')
         }
     },
     methods: {

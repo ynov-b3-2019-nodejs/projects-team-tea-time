@@ -14,16 +14,13 @@
               </div>
               <div class="col">
                 <select name="newRoomCategory" v-model="newRoomCategory" class="form-control" id="exampleFormControlSelect1">
+                  <option value="" selected disabled>Catégorie</option>
                   <option>Sport</option>
                   <option>Musique</option>
                   <option>Cinéma</option>
                   <option>Autres</option>
                 </select>
               </div>
-              <div>
-              <input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
-<input type="text" id="textInput" value="15">
-</div>
             </div>
             <div class="form-group">
               <label for="customRange3">Durée du salon (en jours)</label>
